@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="PF6Vn6W3xL_WzJ-tobNlP0p4ggPLI-QOnMXPfLm7zqs" />
+
+  <title>Same Side</title>
+  <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="img/favicon-16x16.png" sizes="16x16" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link href="css/sameside.css" rel="stylesheet" />
+ 
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="container col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
+      <nav class="navbar navbar-dark navbar-expand-sm navbar-expand-md navbar-expand-lg navbar-expand-xl justify-content-start">
+        <a class="navbar-brand" href="index.html">
+          <h1 class="lead" style="text-align:right; font-size: 2em; padding-top: 4px">Same Side Classification</h1>
+        </a>
+        
+      </nav>
+    </div>
+    <!-- Cards-->
+    <div class="container col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xl-8" style="margin-bottom:6em">
+
+
+      <div class="card text-white p-1 bg-dark">
+        <div class="card-body">
+          <h5 class="lead card-title text-left"><i class="fas fa-clipboard fa-lg" style="margin-right:8px" aria-hidden="true"></i>Description</h5>
+          <p class="card-text text-left">
+            Argumentation mining is of great importance for writing assistance, decisions making, question answering, and much more. Identifying the stance of an argument towards a particular topic is a fundamental sub-task in argumentation mining. While this sub-task has been tackled before, it has been principally approached in a topic-dependent manner, i.e., given a topic and an argument, predict the stance of the argument towards the topic. As such approach is generally confined by setting a predefined topic in advance, we propose the new task of ‘same side stance classification’: Given two arguments on the same topic, decide whether they have the same or opposite stance towards the topic. <br \> <br \> 
+            We welcome you to participate in the task of 'same side stance classification'. We plan to open several calls for system submissions starting from <a href="https://argmining19.webis.de/" target="_blank">the 6th Workshop on Argument Mining at ACL2019</a>, where a discussion of the task and the submissions will take place. This will be followed, by ongoing calls of the task at hand in the upcoming venues (e.g., SemEval). 
+
+          </p>
+        </div>
+      </div>
+      <div class="card text-white p-1 bg-dark">
+        <div class="card-body">
+          <h5 class="lead card-title text-left"><i class="far fa-calendar-alt fa-lg" style="margin-right:8px"
+              aria-hidden="true"></i>Timeline</h5>
+          <p class="card-text text-left">
+            <strong>June 5th, 2019:</strong> Training data available, competition begins. <br>
+            <strong>June 6th, 2019:</strong> Submission open.<br>
+            <strong>July 12th, 2019:</strong> Submission closed (23:59 PM UTC), manual evaluation begins.<br>
+            <strong>August 1st, 2019:</strong> Results presented at <a href="https://argmining19.webis.de/" target="_blank">the 6th Workshop on Argument Mining</a>.<br>
+          </p>
+        </div>
+      </div>
+
+    
+      <div class="card text-white p-1 bg-dark">
+        <div class="card-body">
+          <h4 class="lead card-title text-left"><i class="fa fa-database fa-lg" style="margin-right:8px" aria-hidden="true"></i>Datase and Experiment Settings</h4>
+          <p class="card-text text-left">We provide the data from the following four sources: idebate.org, debatepedia.org, debatewise.org and debate.org. 
+            Each instance in the dataset holds the following fields: <br>
+            <ul class="card-text text-left">
+            <li><i>id</i>: The id of the instance <br></li>
+             <li><i>topic</i>: The title of the debate. It can be a general topic (e.g. abortion) or a topic with a stance (e.g. abortion should be legalized). <br></li>
+            <li> <i>argument1</i>: A pro or con argument related to the topic. <br></li>
+            <li> <i>argument2</i>: A pro or con argument related to the topic. <br></li>
+            <li> <i>is_same_stance</i>:  True or False. True in case argument1 and argument2 have the same stance towards the topic and False otherwise.<br></li>
+            <li> <i>argument1_id</i>: The ID of argument1. <br></li>
+            <li> <i>argument2_id</i>: The ID of argument2. <br></li>
+            </ul>
+          </p>
+
+          <p class="card-text text-left">
+            We choose to work with the most two discussed topics: <i>abortion</i> and <i>gay marriage</i>.
+            We create two distinctive setting for the task of <i>same side classification</i>:
+            <ul class="card-text text-left">
+                <li><i>Within Topics</i>: The training set contains arguments for a set of topics (<i>abortion</i> and <i>gay marriage</i>) and the test set contains arguments related to the same set of topics (<i>abortion</i> and <i>gay marriage</i>). The following table presents an overview about the data. <br>
+                <table>
+                  <tr>
+                    <th>Class | Topic</th>
+                      <th>Abortion</th>
+                      <th>Gay Marriage</th>
+                </tr>
+                <tr>
+                    <td> Same Side</td><td>20,834</td><td>13,277</td>
+                  </tr>
+                  <tr>
+                      <td> Different Side</td><td>20,006</td><td>9,786</td>
+                    </tr>
+                    <tr>
+                        <td> <b>Total</b></td><td><b>40,840</b></td><td><b>23,063</b></td>
+                      </tr>
+                </table>
+                
+                </li>
+                <li><i>Cross Topics</i>: The training set contains arguments for a topic (<i>abortion</i>) and the test set contains argument related to the another set of topics
+                
+                  <table>
+                      <tr>
+                        <th>Class</th>
+                          <th># of instances</th>
+                    </tr>
+                    <tr>
+                        <td> Same Side</td><td>31,195</td>
+                      </tr>
+                      <tr>
+                          <td> Different Side</td><td>29,853</td>
+                        </tr>
+                        <tr>
+                            <td> <b>Total</b></td><td><b>61,048</b></td>
+                          </tr>
+                    </table>
+                    
+                
+                
+                </li>
+            </ul>
+
+
+          </p>
+          <p style="float:left">
+          <a style="float: left;" href="https://forms.gle/gKgMqtrHJojJHrZf9" class="btn btn-default" target="_blank">Register
+              </a>
+            <a href="https://github.com/webis-de/argmining19-same-side-classification" target="new" style="margin-left:10px" class="btn btn-default">Git</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="card text-white p-1 bg-dark">
+        <div class="card-body">
+          <h4 class="lead card-title text-left"><i class="fa fa-chart-bar fa-lg" style="margin-right:8px" aria-hidden="true"></i>Evaluation</h4>
+          <p class="card-text text-left">For the first phase, the evaluation will be done manually. We provide a test set for each experiment setting (<i>Within Topics</i> and <i>Across topics</i>). After you train your model, predict the labels of the test set and send us the results as a CSV file, comma seperated, with header <i>id</i> and <i>label</i>. The <i>id</i> is the instance id provided in the test set and the <i>label</i> has a value of <b>True</b> (the two arguments have the same side) or <b>False</b> (the two arguments do not have the same side).
+          </p>
+          <p class="card-text text-left">
+            human annotation...
+          </p>
+        </div>
+      </div>
+
+
+      
+    </div>
+    <!--End of cards-->
+
+  
+
+  <div id="organizational">
+    <div class="container">
+      <div id="persons">
+        <div class="person col-xl-1 col-lg-2 col-sm-3 col-xs-12">
+          <div>
+            <img src="figures/elbaff.jpg" alt="">
+          </div>
+          <div class="person-info">
+            <p class="person-name">Roxanne El Baff</p>
+          </div>
+        </div>
+        <div class="person col-xl-1 col-lg-2 col-sm-3 col-xs-12">
+          <div>
+            <img src="figures/al-khatib.jpg" alt="">
+          </div>
+          <div class="person-info">
+            <p class="person-name">Khalid Al-Khatib</p>
+          </div>
+        </div>
+        <div class="person col-xl-1 col-lg-2 col-sm-3 col-xs-12">
+          <div>
+            <img src="figures/ajjour.jpg" alt="">
+          </div>
+          <div class="person-info">
+            <p class="person-name">Yamen Ajjour</p>
+          </div>
+        </div>
+    
+        <div class="person col-xl-1 col-lg-2 col-sm-3 col-xs-12">
+          <div>
+            <img src="figures/benno.jpg" alt="">
+          </div>
+          <div class="person-info">
+            <p class="person-name">Benno Stein</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="logos" class="justify-content-center">
+      <a href="https://webis.de/"  style="text-decoration:none" target="_blank" class="lead font-weight-bold "><img src="img/webis-logo-scaled.png" alt=""> </a>
+      &nbsp;Webis
+      &nbsp;
+      &nbsp;
+     
+      
+      <a href="https://www.uni-weimar.de/en/university/start/" style="text-decoration:none" target="_blank" class="lead"><img src="img/uni-weimar-logo.png" alt=""></a>
+        <div style="float: right;color:#fff; margin-right: 10px;">
+      &COPY;webis.de
+    </div>
+    </div>
+    
+  </div>
+</div>
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $('.jumbotron').tooltip({
+      selector: "[data-toggle=tooltip]",
+      container: "body"
+    })
+  </script>
+</body>
+
+</html>
