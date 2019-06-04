@@ -2,7 +2,6 @@
   "name": "sameside.webis.de",
   "version": "1.0.0",
   "main": "index.html",
-  "description": "Same Side Classification", 
   "author": "Roxanne El Baff",
   "license": "MIT",
   "devDependencies": {},
