@@ -21,12 +21,12 @@
 
 
 
-        
+   <!--       
 <div id="offcanvas-nav" class="uk-hidden@m" data-uk-offcanvas="overlay: true; flip: true;">
     <div class="uk-offcanvas-bar">
         <button class="uk-offcanvas-close" type="button" data-uk-close></button>
 
-        <!-- Mobile navigation -->
+       Mobile navigation
         <nav class="uk-margin-large-top">
             <ul class="uk-nav uk-nav-primary uk-nav-parent-icon" data-uk-nav>
                    
@@ -51,7 +51,7 @@
         </nav>
     </div>
 </div>
-
+ -->
 <div class="uk-background-secondary global-nav uk-visible@m" data-uk-sticky="media: @m">
     <!-- Desktop navigation -->
     <nav class="uk-navbar-container uk-navbar-transparent uk-container uk-light" data-uk-navbar="mode: click">
@@ -59,13 +59,13 @@
             <div class="uk-navbar-left">
                     <ul class="uk-navbar-nav">
                             <li{% if page.nav_active == "index" %} class="uk-active"{% endif %}>
-                                    <a href="{{ '/' | relative_url }}">Same Side Classification</a>
+                                    <a href="{{ '/' | relative_url }}">Same Side Stance Classification</a>
                                 </li>
                     </ul>
             </div>
         
         
-        <div class="uk-navbar-right">
+       <!-- <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
                 
                 
@@ -82,7 +82,7 @@
      
                
             </ul>
-        </div>
+        </div>    -->
     </nav>
 </div>
 
@@ -92,7 +92,7 @@
             <ul class="uk-navbar-nav">
             
                 <li{% if page.nav_active == "index" %} class="uk-active"{% endif %}>
-                        <a href="{{ '/' | relative_url }}">Same Side Classification</a>
+                        <a href="{{ '/' | relative_url }}">Same Side Stance Classification</a>
                     </li>
             </ul>
         </div>

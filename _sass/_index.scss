@@ -53,3 +53,11 @@ html {
 .news{
     background-color: rgba(82,173,200,0.25)
 }
+
+.table th, .table td{
+    float: left
+}
+
+.table th:first-child, .table td:first-child{
+    float: right
+}
